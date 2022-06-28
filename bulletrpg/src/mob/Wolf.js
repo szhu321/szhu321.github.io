@@ -12,7 +12,7 @@ export default class Wolf extends Mob
             coinValue: 10
         })
         this.ai = new WolfController(this, {
-            player: scene.player,
+            Player: scene.Player,
             animations: "",
         });
         this.body.setSize(100, 50);

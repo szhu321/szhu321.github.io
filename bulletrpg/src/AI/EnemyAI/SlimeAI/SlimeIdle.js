@@ -15,11 +15,11 @@ export default class SlimeIdle extends SlimeState
 
     update(deltaT) {
         super.update(deltaT);
-        let player = this.getStateMachine().player;
+        let Player = this.getStateMachine().Player;
         let enemy = this.getSprite();
         enemy.setVelocityX(0);
         enemy.setVelocityY(0);
-        let distance = Math.pow(enemy.x - player.x, 2) + Math.pow(enemy.y - player.y, 2);
+        let distance = Math.pow(enemy.x - Player.x, 2) + Math.pow(enemy.y - Player.y, 2);
         //console.log(`slime is idle. Distance: ${distance}`);
         if(distance < Math.pow(this.aggroDistance, 2))
         {

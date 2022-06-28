@@ -5,7 +5,7 @@ import Spray from "./Spray.js";
 export default class BossGunController extends GunManager {
     create(scene, data) {
         this.boss = data.boss;
-        this.player = scene.player;
+        this.Player = scene.Player;
         this.scene = scene;
     }
     Target() {

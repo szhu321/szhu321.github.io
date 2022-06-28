@@ -34,7 +34,7 @@ export default class SlimeRoam extends SlimeState
             this.walkDir = this.getNewDirection();
         }
 
-        let player = this.getStateMachine().player;
+        let Player = this.getStateMachine().Player;
         let enemy = this.getSprite();
         let velocityX = 0;
         let velocityY = 0;
@@ -51,7 +51,7 @@ export default class SlimeRoam extends SlimeState
         enemy.setVelocityX(velocityX);
         enemy.setVelocityY(velocityY);
 
-        let distance = Math.pow(enemy.x - player.x, 2) + Math.pow(enemy.y - player.y, 2);
+        let distance = Math.pow(enemy.x - Player.x, 2) + Math.pow(enemy.y - Player.y, 2);
         //console.log(`slime is idle. Distance: ${distance}`);
         if(distance < Math.pow(this.aggroDistance, 2))
         {

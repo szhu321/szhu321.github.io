@@ -1,5 +1,5 @@
 import { final } from "../final.js";
-import { player } from "../obj/player.js";
+import { Player } from "../obj/Player.js";
 import { Hub } from "../obj/Hub.js";
 // import { Slime } from "../AI/EnemyAI/SlimeAI/Slime.js";
 import DialogBox from "../obj/UI/DialogBox.js";
@@ -186,8 +186,8 @@ export class play extends Phaser.Scene {
         var aboveLayer = lab.createLayer("Above", [terrainTop], 0, 0).setDepth(2);
         this.colliables = passableLayer;
         this.Hub = new Hub(this, "Hub", "Backpack", "Shop");
-        this.player = new player(this);
-        this.player.respawn(50, 100);
+        this.Player = new Player(this);
+        this.Player.respawn(50, 100);
 
         this.Hub.button(this);
 
@@ -195,7 +195,7 @@ export class play extends Phaser.Scene {
         this.floatText = new FloatText(this);
         this.userCamera = new Camera();
         this.userCamera.setCamera(this);
-        this.userCamera.setFollow(this.player);
+        this.userCamera.setFollow(this.Player);
         this.userCamera.setBounds(this.map.widthInPixels, this.map.heightInPixels);
 
         this.cameras.main.setZoom(1.25); //sets the zoom of the camera.
@@ -209,8 +209,8 @@ export class play extends Phaser.Scene {
         this.ScreenUI.addUI(this.StatusBar, 0, 0, UIArea.ANCHOR.TOPLEFT);
         //gun/bullet
         //constructor(bulletSpeed, bulletRange, fireRate, imageName, dude, input, physics, scene)
-        // this.pistol = new Gun(100, 3000, 500, 'dude', this.player, this.input, this.physics, this)
-        // this.ak = new Gun(1000, 100000, 200, 'bullet', this.player, this.input, this.physics, this)
+        // this.pistol = new Gun(100, 3000, 500, 'dude', this.Player, this.input, this.physics, this)
+        // this.ak = new Gun(1000, 100000, 200, 'bullet', this.Player, this.input, this.physics, this)
         // let socket = io();
         // socket.on("chat message", function(msg) {
         //         console.log(msg);
@@ -319,7 +319,7 @@ export class play extends Phaser.Scene {
 
         //spawn a dude mob
         // this.mobDude = this.mobArray.get(250, 250, 'slime').setScale(.75);
-        //this.mobArray.add(new Mob(this, 500, 500, this.player, 'slime'))
+        //this.mobArray.add(new Mob(this, 500, 500, this.Player, 'slime'))
         //this.mobArray.get(500, 500, "slime");
 
         // this.time.addEvent({
@@ -346,19 +346,19 @@ export class play extends Phaser.Scene {
         //add collisions for the mob.
 
         // for(let group of this.mobManager.getMobGroups())
-        //     this.physics.add.overlap(group, this.player.hitbox.sprite, this.handleDamage, null, this); 
+        //     this.physics.add.overlap(group, this.Player.hitbox.sprite, this.handleDamage, null, this); 
 
         this.test = this.add.image(300, 300, "BuyButton").setOrigin(0).setDepth(10).setScrollFactor(0).setInteractive();
         this.test.on("pointerup", () => {
             this.scene.start(final.SCENES.TEST);
         });
-        this.player.updateScene(this);
+        this.Player.updateScene(this);
         this.worldHeightInPixels = lab.heightInPixels;
         this.worldWidthInPixels = lab.widthInPixels;
 
         //add collision handlers for the mobs.
-        this.mobManager.addOverlapAll(this.player.hitbox.sprite, this.handleMobPlayerCollision);
-        let gunDict = this.player.gunController.getGunDict();
+        this.mobManager.addOverlapAll(this.Player.hitbox.sprite, this.handleMobPlayerCollision);
+        let gunDict = this.Player.gunController.getGunDict();
         for (let key in gunDict)
             this.mobManager.addOverlapAll(gunDict[key].getBulletArray(), this.handleMobBulletCollision);
 
@@ -373,16 +373,16 @@ export class play extends Phaser.Scene {
     //     }
     //     return result;
     // }
-    handleMobPlayerCollision(player, monster) {
-        if (this.player.alpha == 0.5) return;
+    handleMobPlayerCollision(Player, monster) {
+        if (this.Player.alpha == 0.5) return;
         // console.log("hello")
         if (monster.active) {
-            this.player.status.hp = this.player.status.hp - monster.getDamage();
-            // this.sound.play("playerTakeDamageSound");
+            this.Player.status.hp = this.Player.status.hp - monster.getDamage();
+            // this.sound.play("PlayerTakeDamageSound");
             // console.log(monster)
-            // console.log(player)
-            if (this.player.status.hp <= 0) {
-                this.player.killplayer();
+            // console.log(Player)
+            if (this.Player.status.hp <= 0) {
+                this.Player.killPlayer();
                 this.ak = null
             }
             this.invulnerable()
@@ -391,10 +391,10 @@ export class play extends Phaser.Scene {
     }
 
     invulnerable() {
-        this.player.alpha = 0.5;
+        this.Player.alpha = 0.5;
         this.time.addEvent({
             delay: 1000,
-            callback: () => { this.player.alpha = 1 },
+            callback: () => { this.Player.alpha = 1 },
             callbackScope: this,
             loop: false
         });
@@ -403,7 +403,7 @@ export class play extends Phaser.Scene {
     /**
      * 
      * @param {Mob} obj1 - The mob.
-     * @param {Player} obj2 - The player.
+     * @param {Player} obj2 - The Player.
      */
     handleMobBulletCollision(obj1, obj2) {//obj1 is the mob obj 2 is the bullets
         //console.log(obj1)
@@ -435,7 +435,7 @@ export class play extends Phaser.Scene {
                 //obj1.setVisible(false);
                 obj1.visible = false;
                 obj1.active = false;
-                this.player.status.coins += obj1.getCoinValue();
+                this.Player.status.coins += obj1.getCoinValue();
                 //play some particles.
                 let num = Math.log2(obj1.getDefaultHealth());
                 this.particleManager.sprayParticle("rect", obj1.x, obj1.y, {
@@ -460,12 +460,12 @@ export class play extends Phaser.Scene {
         }
     }
     createNewPlayer() {
-        return new player(this);
+        return new Player(this);
     }
     update(time, delta) {
         this.keyboard.update();
-        this.player.update(delta);
-        this.StatusBar.health = this.player.status.health
+        this.Player.update(delta);
+        this.StatusBar.health = this.Player.status.health
         this.StatusBar.update()
         // if (this.ak != null) {
         //     this.ak.update(time, delta);

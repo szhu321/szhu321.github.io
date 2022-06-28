@@ -12,7 +12,7 @@ export default class Slime extends Mob
             coinValue: 2,
         })
         this.ai = this.ai = new SlimeController(this, {
-            player: scene.player,
+            Player: scene.Player,
             animations: "",
             slimes: [],
         });

@@ -10,8 +10,8 @@ export default class Gun {
     #bulletImage;//String name for the bullet sprite
     //#bulletArray;//Array of bullets
 
-    //this.pistol = new Gun(100, 3000, 500, 'dude', this.player, this.input, this.physics, this)
-    //this.ak = new Gun(1000, 100000, 200, 'bullet', this.player, this.input, this.physics, this)
+    //this.pistol = new Gun(100, 3000, 500, 'dude', this.Player, this.input, this.physics, this)
+    //this.ak = new Gun(1000, 100000, 200, 'bullet', this.Player, this.input, this.physics, this)
     constructor(gunName, gunManager, scene) {
         this.setDefault();
         this.#gunName = gunName;
@@ -20,7 +20,7 @@ export default class Gun {
         this.cursor = scene.input.mousePointer;
         this.camera = scene.cameras.main;
         this.physics = scene.physics;
-        this.player = gunManager.player;
+        this.Player = gunManager.Player;
     }
     setDefault() {
         this.#gunName = "default";
@@ -76,8 +76,8 @@ export default class Gun {
         })
     }
     shoot() {
-        let startX = this.player.x + this.player.width / 4;
-        let startY = this.player.y + this.player.height / 4;
+        let startX = this.Player.x + this.Player.width / 4;
+        let startY = this.Player.y + this.Player.height / 4;
         let targetX = this.cursor.x / this.camera.zoom;
         let targetY = this.cursor.y / this.camera.zoom;
         let bullet = this.getBulletArray().get(startX, startY, this.#bulletImage).setScale(1.5);
@@ -85,8 +85,8 @@ export default class Gun {
         bullet.visible = true;
         bullet.active = true;
         bullet.setVelocity(startX, startY, targetX, targetY, this.camera, this.#bulletSpeed);
-        bullet.spawnX = this.player.x;
-        bullet.spawnY = this.player.y;
+        bullet.spawnX = this.Player.x;
+        bullet.spawnY = this.Player.y;
         this.#coolDown = this.#fireRate;
     }
     getBulletImage() {

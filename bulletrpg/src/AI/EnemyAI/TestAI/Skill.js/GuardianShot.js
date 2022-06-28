@@ -2,12 +2,12 @@ import State from "../../../StateMachine/State.js";
 export default class GuardianShot extends State {
     onEnter() {
         this.returnCD = 400;
-        let player = this.getStateMachine().player;
+        let Player = this.getStateMachine().Player;
         let enemy = this.getStateMachine().sprite;
         enemy.setVelocityX(0);
         enemy.setVelocityY(0);
-        this.predictX = player.body.velocity.x/2 + player.x;
-        this.predictY = player.body.velocity.y/2 + player.y;
+        this.predictX = Player.body.velocity.x/2 + Player.x;
+        this.predictY = Player.body.velocity.y/2 + Player.y;
         this.getStateMachine().scene.add.sprite(this.predictX,this.predictY,"slime").setScale(3);
     }
 

@@ -10,7 +10,7 @@ export class Boss extends Phaser.Physics.Arcade.Sprite {
         scene.add.existing(this);
         this.scene = scene
         this.mobAlive = true;
-        this.player = scene.player;
+        this.Player = scene.Player;
         //this = scene.physics.add.sprite(x, y, sprite);
         //this.spawnX = x;
         //this.spawnY = y;
@@ -20,7 +20,7 @@ export class Boss extends Phaser.Physics.Arcade.Sprite {
         this.damage = 100;
 
         this.ai = new BossController(this,{
-            player: this.player,
+            Player: this.Player,
             dscene: scene,
         });
         this.scale = Math.random() + 1;

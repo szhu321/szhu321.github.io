@@ -12,7 +12,7 @@ export default class BossRoam extends State {
 
 
     update(deltaT) {
-        let player = this.getStateMachine().player;
+        let Player = this.getStateMachine().Player;
         let enemy = this.getStateMachine().sprite;
         this.timer -= deltaT;
         if (this.timer <= 0) {
@@ -48,7 +48,7 @@ export default class BossRoam extends State {
         if (this.lungeCD <= 0) {
             this.getStateMachine().changeState("lunge");
         }
-        let distance = Math.sqrt(Math.pow(enemy.x - player.x, 2) + Math.pow(enemy.y - player.y, 2));
+        let distance = Math.sqrt(Math.pow(enemy.x - Player.x, 2) + Math.pow(enemy.y - Player.y, 2));
         //console.log(`slime is idle. Distance: ${distance}`);
 
         if (distance > 400) {

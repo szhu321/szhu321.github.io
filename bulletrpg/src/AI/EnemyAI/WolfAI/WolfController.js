@@ -5,7 +5,7 @@ import WolfLunge from "../WolfAI/WolfLunge.js"
 import WolfRoam from "../WolfAI/WolfRoam.js";
 export default class WolfController extends StateMachine {
     create(sprite, data) {
-        this.player = data.player;
+        this.Player = data.Player;
         this.sprite = sprite;
         this.lungeCD = 2000;
 

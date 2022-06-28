@@ -39,9 +39,9 @@ export default class WolfRoam extends State {
             enemy.setVelocityY(40);
         }
 
-        //check the player's position
-        let player = this.getStateMachine().player;
-        //if the player is too close change state.
+        //check the Player's position
+        let Player = this.getStateMachine().Player;
+        //if the Player is too close change state.
 
         let velocityX = 0;
         let velocityY = 0;
@@ -76,7 +76,7 @@ export default class WolfRoam extends State {
             //enemy.setVelocityY(enemy.body.velocity.y)
         }
 
-        let distance = Math.sqrt(Math.pow(enemy.x - player.x, 2) + Math.pow(enemy.y - player.y, 2));
+        let distance = Math.sqrt(Math.pow(enemy.x - Player.x, 2) + Math.pow(enemy.y - Player.y, 2));
         //console.log(`slime is idle. Distance: ${distance}`);
         if (distance < 300) {
             this.getStateMachine().changeState("follow");

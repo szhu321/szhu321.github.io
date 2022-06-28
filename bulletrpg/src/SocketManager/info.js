@@ -1,5 +1,5 @@
 export default class info{
-    playerID = -1;
+    PlayerID = -1;
     time;
     velocityX;
     velocityY;

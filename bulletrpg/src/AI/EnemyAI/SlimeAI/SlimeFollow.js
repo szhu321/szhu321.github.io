@@ -11,11 +11,11 @@ export default class SlimeFollow extends SlimeState
     update(deltaT)
     {
         super.update(deltaT);
-        let player = this.getStateMachine().player;
+        let Player = this.getStateMachine().Player;
         let enemy = this.getStateMachine().sprite;
 
-        let velocityX = player.x - enemy.body.x;
-        let velocityY = player.y - enemy.body.y;
+        let velocityX = Player.x - enemy.body.x;
+        let velocityY = Player.y - enemy.body.y;
 
         let distance = Math.sqrt(velocityX * velocityX + velocityY * velocityY);
         velocityX = velocityX / distance * enemy.getSpeed();
@@ -24,7 +24,7 @@ export default class SlimeFollow extends SlimeState
         enemy.setVelocityX(velocityX);
         enemy.setVelocityY(velocityY);
 
-        let distance2 = Math.pow(enemy.x - player.x, 2) + Math.pow(enemy.y - player.y, 2);
+        let distance2 = Math.pow(enemy.x - Player.x, 2) + Math.pow(enemy.y - Player.y, 2);
         //console.log(`slime is idle. Distance: ${distance}`);
         if (distance2 > this.followOutOfRange * this.followOutOfRange) {
             this.getStateMachine().changeState("slimeRoam");

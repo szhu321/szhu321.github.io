@@ -14,7 +14,7 @@ export default class DongRoam extends State
     
     update(deltaT) {
         //console.log("dongroam")
-        let player = this.getStateMachine().player;
+        let Player = this.getStateMachine().Player;
         let enemy = this.getSprite();
         this.timer -= deltaT;
         if(this.timer <= 0)
@@ -46,7 +46,7 @@ export default class DongRoam extends State
             }
         }
 
-        let distance = Math.sqrt(Math.pow(enemy.x - player.x, 2) + Math.pow(enemy.y - player.y, 2));
+        let distance = Math.sqrt(Math.pow(enemy.x - Player.x, 2) + Math.pow(enemy.y - Player.y, 2));
         //console.log(`slime is idle. Distance: ${distance}`);
         
         if(distance>600){

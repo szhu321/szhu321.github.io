@@ -11,7 +11,7 @@ export default class SlimeController extends StateMachine
     {
         this.sprite = sprite;
         this.slimes = data.slimes?data.slimes:null;
-        this.player = data.player?data.player:null;
+        this.Player = data.Player?data.Player:null;
         this.sprite.superSlime = false;
 
         this.addState(new SlimeFollow("slimeFollow", this, sprite));

@@ -14,11 +14,11 @@ io.on("connection", (socket) => {
     socket.on("disconnect", () => {
         console.log("user disconnected");
     })
-    let playerID = ID++;
+    let PlayerID = ID++;
     let q = new queue();
     socket.on("server", function (obj) {
         q.insert(obj);
-        socket.broadcast.emit("client", q.getFirst(playerID));
+        socket.broadcast.emit("client", q.getFirst(PlayerID));
     })
     io.emit("chat message", "You are very good at sockets.")
 })
@@ -29,9 +29,9 @@ class queue{//not a real queue since removing items from the queue takes linear 
     constructor(){
         this.q = [];
     }
-    getFirst(playerID){//remove and return first item of queue
+    getFirst(PlayerID){//remove and return first item of queue
         let obj = this.q.shift();
-        obj.playerID = playerID;
+        obj.PlayerID = PlayerID;
         return obj;
     }
     insert(obj){//add item to end of queue

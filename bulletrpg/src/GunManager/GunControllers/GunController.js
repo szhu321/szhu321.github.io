@@ -4,7 +4,7 @@ import Sniper from "../Guns/Sniper.js";
 import testGun from "../Guns/tylergun.js";
 export default class GunController extends GunManager{
     create(scene, data){
-        this.player = data.player;
+        this.Player = data.Player;
         this.scene = scene;
         //console.log("entering create!!!")
         let pistol = new Pistol("Pistol", this, scene);

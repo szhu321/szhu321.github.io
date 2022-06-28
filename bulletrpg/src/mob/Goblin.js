@@ -13,7 +13,7 @@ export default class Goblin extends Mob {
         })
         this.setSize(30, 60);
         this.ai = new GoblinController(this, {
-            player: scene.player,
+            Player: scene.Player,
             animations: "",
         });
         this.time = scene.time;

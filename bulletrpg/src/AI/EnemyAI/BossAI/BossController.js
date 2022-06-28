@@ -6,7 +6,7 @@ import BossRoam from "./BossRoam.js";
 
 export default class BossController extends StateMachine {
     create(sprite, data) {
-        this.player = data.player;
+        this.Player = data.Player;
         this.sprite = sprite;
 
         let follow = new BossFollow("follow", this, sprite);

@@ -24,8 +24,8 @@ export default class Target extends Gun {
     shoot() {
         let startX = this.getGunMachine().boss.x + this.getGunMachine().boss.width / 4;
         let startY = this.getGunMachine().boss.y + this.getGunMachine().boss.height / 4;
-        let targetX = this.getGunMachine().player.x
-        let targetY = this.getGunMachine().player.y
+        let targetX = this.getGunMachine().Player.x
+        let targetY = this.getGunMachine().Player.y
         let bullet = this.getBulletArray().get(startX, startY, this.getBulletImage()).setScale(1.5);
         bullet.damage = this.getBulletDamage();
         bullet.visible = true;

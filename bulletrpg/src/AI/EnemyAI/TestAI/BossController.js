@@ -7,7 +7,7 @@ import BossLunge from "./BossLunge.js";
 import GuardianShot from "./Skill.js/GuardianShot.js";
 export default class BossController extends StateMachine{
     create(sprite, data) {
-        this.player = data.player;
+        this.Player = data.Player;
         this.scene = data.dscene;
         this.sprite = sprite;
         this.lungeCD = 2000;

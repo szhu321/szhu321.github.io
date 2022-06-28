@@ -20,8 +20,8 @@ export default class SlimeState extends State
         // let pixelSeperation = 100;
         // let region = {};
         // //calculate the region of the current slime.
-        // let mapSizeWidth = this.player.scene.worldWidthInPixels;
-        // let mapSizeY = this.player.scene.worldHeightInPixels;
+        // let mapSizeWidth = this.Player.scene.worldWidthInPixels;
+        // let mapSizeY = this.Player.scene.worldHeightInPixels;
 
         // let num = this.getSprite().x / pixelSeperation + (this.getSprite().y / pixelSeperation) * (mapSizeWidth / pixelSeperation);
         // region[`${num}`] = true;

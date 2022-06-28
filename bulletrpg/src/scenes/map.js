@@ -1,5 +1,5 @@
 import { final } from "../final.js";
-import { player } from "../obj/player.js";
+import { Player } from "../obj/Player.js";
 import { Camera } from "../obj/Camera.js";
 import { Hub } from "../obj/Hub.js";
 import { Terrain } from "../obj/Terrain.js";
@@ -9,7 +9,7 @@ export class SceneHolder extends Phaser.Scene{
         super({
             key: final.SCENES.TEST
         });
-        this.player = null;
+        this.Player = null;
         this.mobArray = null;
         this.camera = null;
         this.userInterface = null;
@@ -23,19 +23,19 @@ export class SceneHolder extends Phaser.Scene{
     }
     create() {
         this.terrain = new Terrain(this); 
-        this.player = new player(this);
+        this.Player = new Player(this);
         this.camera = new Camera();
         this.Hub = new Hub(this, "Hub", "Backpack", "Shop");
 
         this.loadWorld("test");
 
-        this.player.updateScene(this);      
+        this.Player.updateScene(this);      
     }
     update(time, delta) {
         this.keyboard.update();
         this.physics.world.setBounds(0, 0, this.terrain.getMapWidth(), this.terrain.getMapHeight());
-        if(this.player != null)
-            this.player.update(delta);
+        if(this.Player != null)
+            this.Player.update(delta);
     }
     terrainConfig(mapName) {
         this.terrain.setTerrainMap(mapName);
@@ -46,19 +46,19 @@ export class SceneHolder extends Phaser.Scene{
         this.spawn = this.terrain.getSpawnInfo();  
         this.doorEvent = this.terrain.getDoorInfo();
     }
-    playerConfig() {
+    PlayerConfig() {
         if(this.spawn != null) {
-            this.player.respawn(this.spawn[0].x, this.spawn[0].y);  
+            this.Player.respawn(this.spawn[0].x, this.spawn[0].y);  
         }
     }
     cameraConfig() {
         this.camera.setCamera(this);
-        this.camera.setFollow(this.player);
+        this.camera.setFollow(this.Player);
         this.camera.setBounds(this.terrain.getMapWidth(), this.terrain.getMapHeight());
     }
     loadWorld(mapName) {
         this.terrainConfig(mapName);
-        this.playerConfig();
+        this.PlayerConfig();
         this.cameraConfig();
         
         this.collidors();
@@ -66,7 +66,7 @@ export class SceneHolder extends Phaser.Scene{
     destroyWorld() {
         this.terrain.initalize();
         this.camera.initalize();
-        this.player.initalize();
+        this.Player.initalize();
         this.mobArray = null;
         this.spawn = null;
         for(var i = 0; i < this.doorEvent.length; i++)
@@ -75,11 +75,11 @@ export class SceneHolder extends Phaser.Scene{
         this.physics.world.colliders.destroy();
     }
     collidors() {
-        this.player.collidablesTerrain(this, this.terrain.getMapColliables());
+        this.Player.collidablesTerrain(this, this.terrain.getMapColliables());
         for(var i = 0; i < this.doorEvent.length; i++)
-            this.physics.add.overlap(this.player, this.doorEvent[i], this.teleport, null, this);
+            this.physics.add.overlap(this.Player, this.doorEvent[i], this.teleport, null, this);
     }
-    teleport(player, door) {
+    teleport(Player, door) {
         let tempKeyboard = this.keyboard.getKeyboard();
         let data = {
             "Link": door.data.list.Link,
@@ -91,7 +91,7 @@ export class SceneHolder extends Phaser.Scene{
             if(!data.Lock) {
                 for(var i = 0; i < this.doorEvent.length; i++) {
                     if(data.Link === this.doorEvent[i].id)
-                        this.player.respawn(this.doorEvent[i].x - 16, this.doorEvent[i].y - 16);
+                        this.Player.respawn(this.doorEvent[i].x - 16, this.doorEvent[i].y - 16);
                     else if(data.Link.length > 1) {
                         this.OuterDoorId = data.OuterDoorId;
                         this.levelData = this.cache.json.get(data.Link);

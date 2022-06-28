@@ -5,8 +5,8 @@ export default class StatusBar extends UIArea {
     super(scene)
     let statusBarWidth = 300;
     let statusBarHeight = 60;
-    this.player = scene.player
-    this.coins = this.player.status.coins
+    this.Player = scene.Player
+    this.coins = this.Player.status.coins
     this.setDepth(100);
     this.setScrollFactor(0);
     this.setSize(statusBarWidth, statusBarHeight);
@@ -26,9 +26,9 @@ export default class StatusBar extends UIArea {
   }
 
   update() {
-    this.coins = this.player.status.coins
+    this.coins = this.Player.status.coins
     this.text.setText("Coins: " + this.coins.toString())
-    this.healthBar.width = this.healthBarWidth * (this.player.status.hp / 1000.0);
+    this.healthBar.width = this.healthBarWidth * (this.Player.status.hp / 1000.0);
 
   }
 }

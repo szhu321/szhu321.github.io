@@ -7,7 +7,7 @@ import DongRoam from "./DongRoam.js";
 
 export default class EnemyController extends StateMachine {
         create(sprite, data) {
-                this.player = data.player;
+                this.Player = data.Player;
                 this.sprite = sprite;
                 this.lungeCD = 2000;
 

@@ -1,7 +1,7 @@
 import { Status } from './Status.js';
 import { HitBox } from './HitBox.js';
 import GunController from '../GunManager/GunControllers/GunController.js';
-export class player extends Phaser.Physics.Arcade.Sprite {
+export class Player extends Phaser.Physics.Arcade.Sprite {
     constructor(scene) {
         super(scene, 0, 0, "dude");
         scene.add.existing(this);
@@ -53,7 +53,7 @@ export class player extends Phaser.Physics.Arcade.Sprite {
         return arrayOfMembers;
     }
     updateScene(scene) {
-        this.gunController = new GunController(scene, { player: this });
+        this.gunController = new GunController(scene, { Player: this });
         this.switchGunCoolDown = 2000;
     }
     getX() {
@@ -62,7 +62,7 @@ export class player extends Phaser.Physics.Arcade.Sprite {
     getY() {
         return this.body.y
     }
-    killplayer() {
+    killPlayer() {
         this.visible = false;
         this.setVisible(false);
         this.active = false;

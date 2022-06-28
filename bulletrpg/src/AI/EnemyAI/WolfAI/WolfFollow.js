@@ -13,15 +13,15 @@ export default class WolfFollow extends State {
 
 
     update(deltaT) {
-        //when the player gets too far away stop following.
-        //when the player gets out of visiion stop following.
+        //when the Player gets too far away stop following.
+        //when the Player gets out of visiion stop following.
         //change to another state. Go back to idle.
-        //console.log("following player.");
-        let player = this.getStateMachine().player;
+        //console.log("following Player.");
+        let Player = this.getStateMachine().Player;
         let enemy = this.getStateMachine().sprite;
 
-        let velocityX = player.x - enemy.body.x;
-        let velocityY = player.y - enemy.body.y;
+        let velocityX = Player.x - enemy.body.x;
+        let velocityY = Player.y - enemy.body.y;
 
         let distance = Math.sqrt(velocityX * velocityX + velocityY * velocityY);
         velocityX = velocityX / distance * enemy.getSpeed();
@@ -43,16 +43,16 @@ export default class WolfFollow extends State {
 
         else if (Math.abs(velocityX) <= Math.abs(velocityY)) {
             // if (Math.abs(velocityX) <= this.speed / 2) {
-            if (player.x - enemy.x > 0) {
+            if (Player.x - enemy.x > 0) {
                 enemy.flipX = false
                 enemy.play("wolf_right", true);
-            } else if (player.x - enemy.x < 0) {
+            } else if (Player.x - enemy.x < 0) {
                 enemy.flipX = true
                 enemy.play("wolf_right", true);
             }
         }
 
-        let distance2 = Math.sqrt(Math.pow(enemy.x - player.x, 2) + Math.pow(enemy.y - player.y, 2));
+        let distance2 = Math.sqrt(Math.pow(enemy.x - Player.x, 2) + Math.pow(enemy.y - Player.y, 2));
         //console.log(`slime is idle. Distance: ${distance}`);
         if (distance2 > 600) {
             this.getStateMachine().changeState("roam");

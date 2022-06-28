@@ -1,4 +1,4 @@
-import { player } from "../obj/player.js";
+import { Player } from "../obj/Player.js";
 
 export default class SocketController{
     #socket;
@@ -15,16 +15,16 @@ export default class SocketController{
     }
     execute(info){
         //execute the server's instructions
-        //console.log(info.playerID);
-        if(!(info.playerID in this.dict)){
-            this.dict[info.playerID] = this.scene.createNewPlayer();
+        //console.log(info.PlayerID);
+        if(!(info.PlayerID in this.dict)){
+            this.dict[info.PlayerID] = this.scene.createNewPlayer();
         }
-        let player = this.dict[info.playerID];
-        player.body.velocity.x = info.velocityX;
-        player.body.velocity.y = info.velocityY;
-        player.x = info.x;
-        player.y = info.y;
+        let Player = this.dict[info.PlayerID];
+        Player.body.velocity.x = info.velocityX;
+        Player.body.velocity.y = info.velocityY;
+        Player.x = info.x;
+        Player.y = info.y;
         if(info.shoot)
-            player.shoot()
+            Player.shoot()
     }
 }   

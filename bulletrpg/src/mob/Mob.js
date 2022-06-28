@@ -1,4 +1,4 @@
-import { player } from "../obj/player.js";
+import { Player } from "../obj/Player.js";
 import HealthBar from "../obj/UI/HealthBar.js";
 
 /**
@@ -12,7 +12,7 @@ export default class Mob extends Phaser.Physics.Arcade.Sprite {
     #coinValue;
     #damage;
     #healthBar;
-    #player;
+    #Player;
     #mobAlive;
 
     /**
@@ -34,7 +34,7 @@ export default class Mob extends Phaser.Physics.Arcade.Sprite {
         this.#coinValue = 5;
         this.#damage = 100;
         this.#healthBar = new HealthBar(scene, 0, 0, this.#defaultHealth);
-        this.#player = scene.player;
+        this.#Player = scene.Player;
         this.#mobAlive = true;
         this.#healthBar.follow(this);
         //this.setBounce(0.5, 0.5);
@@ -142,10 +142,10 @@ export default class Mob extends Phaser.Physics.Arcade.Sprite {
     setDamage(damage) {this.#damage = damage;} 
 
     /**
-     * Gets the current player.
-     * @returns {player} The player.
+     * Gets the current Player.
+     * @returns {Player} The Player.
      */
-    getPlayer() {return this.#player};
+    getPlayer() {return this.#Player};
 
     /**
      * Checks if the mob is alive or not.

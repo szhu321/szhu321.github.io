@@ -12,7 +12,7 @@ export default class Boss extends Mob {
             defaultHealth: 5000,
         })
         this.ai = new BossController(this, {
-            player: scene.player,
+            Player: scene.Player,
             animations: "",
         });
         this.time = scene.time;

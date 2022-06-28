@@ -4,7 +4,7 @@ import GoblinPushUp from "../GoblinAI/GoblinPushUp.js";
 import GoblinRoam from "../GoblinAI/GoblinRoam.js";
 export default class GoblinController extends StateMachine {
     create(sprite, data) {
-        this.player = data.player;
+        this.Player = data.Player;
         this.sprite = sprite;
         this.lungeCD = 2000;
 
