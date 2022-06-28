@@ -1,0 +1,16 @@
+{
+    "object": [
+        {
+            "Icon": "HubIcon",
+            "UserInterface": "Hub"
+        },
+        {
+            "Icon": "BackpackIcon",
+            "UserInterface": "Backpack"
+        },
+        {
+            "Icon": "ShopIcon",
+            "UserInterface": "Shop"
+        }
+    ]
+}

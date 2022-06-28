@@ -1,0 +1,271 @@
+{
+	"textures": [
+		{
+			"image": "slime",
+			"format": "RGBA8888",
+			"size": {
+				"w": 65,
+				"h": 165
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "slime1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 14,
+						"w": 27,
+						"h": 23
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 23
+					}
+				},
+				{
+					"filename": "slime10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 13,
+						"w": 32,
+						"h": 24
+					},
+					"frame": {
+						"x": 0,
+						"y": 23,
+						"w": 32,
+						"h": 24
+					}
+				},
+				{
+					"filename": "slime11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 13,
+						"w": 33,
+						"h": 24
+					},
+					"frame": {
+						"x": 0,
+						"y": 47,
+						"w": 33,
+						"h": 24
+					}
+				},
+				{
+					"filename": "slime12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 13,
+						"w": 32,
+						"h": 24
+					},
+					"frame": {
+						"x": 0,
+						"y": 71,
+						"w": 32,
+						"h": 24
+					}
+				},
+				{
+					"filename": "slime2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 13,
+						"w": 28,
+						"h": 24
+					},
+					"frame": {
+						"x": 32,
+						"y": 0,
+						"w": 28,
+						"h": 24
+					}
+				},
+				{
+					"filename": "slime3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 14,
+						"w": 29,
+						"h": 23
+					},
+					"frame": {
+						"x": 0,
+						"y": 95,
+						"w": 29,
+						"h": 23
+					}
+				},
+				{
+					"filename": "slime4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 13,
+						"w": 32,
+						"h": 24
+					},
+					"frame": {
+						"x": 32,
+						"y": 71,
+						"w": 32,
+						"h": 24
+					}
+				},
+				{
+					"filename": "slime5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 13,
+						"w": 33,
+						"h": 24
+					},
+					"frame": {
+						"x": 0,
+						"y": 118,
+						"w": 33,
+						"h": 24
+					}
+				},
+				{
+					"filename": "slime6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 13,
+						"w": 32,
+						"h": 24
+					},
+					"frame": {
+						"x": 33,
+						"y": 24,
+						"w": 32,
+						"h": 24
+					}
+				},
+				{
+					"filename": "slime7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 14,
+						"w": 27,
+						"h": 23
+					},
+					"frame": {
+						"x": 0,
+						"y": 142,
+						"w": 27,
+						"h": 23
+					}
+				},
+				{
+					"filename": "slime8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 13,
+						"w": 28,
+						"h": 24
+					},
+					"frame": {
+						"x": 33,
+						"y": 95,
+						"w": 28,
+						"h": 24
+					}
+				},
+				{
+					"filename": "slime9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 14,
+						"w": 29,
+						"h": 23
+					},
+					"frame": {
+						"x": 33,
+						"y": 48,
+						"w": 29,
+						"h": 23
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.7"
+	}
+}

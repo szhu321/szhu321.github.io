@@ -1,0 +1,271 @@
+{
+	"textures": [
+		{
+			"image": "dude",
+			"format": "RGBA8888",
+			"size": {
+				"w": 250,
+				"h": 300
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "dude4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dude0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 50,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dude10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 100,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dude11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 0,
+						"y": 100,
+						"w": 50,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dude2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 50,
+						"y": 100,
+						"w": 50,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dude3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 100,
+						"y": 100,
+						"w": 50,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dude1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 150,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dude5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 150,
+						"y": 100,
+						"w": 50,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dude6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 200,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dude7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 200,
+						"y": 100,
+						"w": 50,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dude8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 0,
+						"y": 200,
+						"w": 50,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dude9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 100
+					},
+					"frame": {
+						"x": 50,
+						"y": 200,
+						"w": 50,
+						"h": 100
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.7"
+	}
+}

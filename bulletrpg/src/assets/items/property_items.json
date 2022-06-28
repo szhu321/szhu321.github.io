@@ -1,0 +1,117 @@
+{
+    "object": [
+        {
+            "type": "consumable", 
+            "name": "Ammo", 
+            "id": 1, 
+            "maxStack": 99, 
+            "amount": 1, 
+            "heal_hp": 0,
+            "heal_mp": 0,
+            "cooldown": 0,
+            "picture": "consumable_ammobox.png",
+            "description": "Ammo for your pistol"
+        },
+        {
+            "type": "consumable", 
+            "name": "Red Berry", 
+            "id": 2, 
+            "maxStack": 99, 
+            "amount": 1,
+            "heal_hp": 10,
+            "heal_mp": 0,
+            "cooldown": 5,
+            "picture": "consumable_redberry.png",
+            "description": "A bright red berry! Heal 10 health with 5 seconds of cooldown."
+        },
+        {
+            "type": "consumable", 
+            "name": "(T1) Blue Potion", 
+            "id": 3,
+            "maxStack": 99, 
+            "amount": 1,
+            "heal_hp": 0,
+            "heal_mp": 50,
+            "cooldown": 10,
+            "picture": "consumable_t1bluepotion.png",
+            "description": "It heal 50 of your mana with 10 seconds of cooldown."
+        },
+        {
+            "type": "consumable", 
+            "name": "(T1) Red Potion", 
+            "id": 4,
+            "maxStack": 99, 
+            "amount": 1,
+            "heal_hp": 50,
+            "heal_mp": 0,
+            "cooldown": 10,
+            "picture": "consumable_t1redpotion.png",
+            "description": "It heal 50 of your health with 10 seconds of cooldown."
+        },
+        {
+            "type": "gun", 
+            "name": "Assualt Rifle", 
+            "id": 5,
+            "maxStack": 1, 
+            "amount": 1,
+            "damage": 0,
+            "fireRate": 0,
+            "projectileSpeed": 0,
+            "range": 0,
+            "picture": "gun_ar.png",
+            "description": "Super fast gun!"
+        },
+        {
+            "type": "gun", 
+            "name": "Pistol", 
+            "id": 6,
+            "maxStack": 1, 
+            "amount": 1,
+            "damage": 0,
+            "fireRate": 0,
+            "projectileSpeed": 0,
+            "range": 0,
+            "picture": "gun_pistol.png",
+            "description": "Normal gun"
+        },
+        {
+            "type": "gun", 
+            "name": "RPG", 
+            "id": 7,
+            "maxStack": 1, 
+            "amount": 1,
+            "damage": 0,
+            "fireRate": 0,
+            "projectileSpeed": 0,
+            "range": 0,
+            "picture": "gun_rpg.png",
+            "description": "Boom!"
+        },
+        {
+            "type": "gun", 
+            "name": "Shotgun", 
+            "id": 8,
+            "maxStack": 1, 
+            "amount": 1,
+            "damage": 0,
+            "fireRate": 0,
+            "projectileSpeed": 0,
+            "range": 0,
+            "picture": "gun_shotgun.png",
+            "description": "Multiple holes"
+        },
+        {
+            "type": "gun", 
+            "name": "Sniper", 
+            "id": 9,
+            "maxStack": 1, 
+            "amount": 1,
+            "damage": 0,
+            "fireRate": 0,
+            "projectileSpeed": 0,
+            "range": 0,
+            "picture": "gun_sniper.png",
+            "description": "Heashot!"
+        }
+    ]
+}

@@ -1,0 +1,250 @@
+{
+  "textures": [
+    {
+      "image": "wolve",
+      "format": "RGBA8888",
+      "size": {
+        "w": 440,
+        "h": 300
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "wolve1.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 110,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          },
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          }
+        },
+        {
+          "filename": "wolve10.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 110,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          },
+          "frame": {
+            "x": 0,
+            "y": 60,
+            "w": 110,
+            "h": 60
+          }
+        },
+        {
+          "filename": "wolve11.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 110,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          },
+          "frame": {
+            "x": 110,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          }
+        },
+        {
+          "filename": "wolve2.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 110,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          },
+          "frame": {
+            "x": 0,
+            "y": 120,
+            "w": 110,
+            "h": 60
+          }
+        },
+        {
+          "filename": "wolve3.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 110,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          },
+          "frame": {
+            "x": 110,
+            "y": 60,
+            "w": 110,
+            "h": 60
+          }
+        },
+        {
+          "filename": "wolve4.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 110,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          },
+          "frame": {
+            "x": 220,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          }
+        },
+        {
+          "filename": "wolve5.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 110,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          },
+          "frame": {
+            "x": 0,
+            "y": 180,
+            "w": 110,
+            "h": 60
+          }
+        },
+        {
+          "filename": "wolve6.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 110,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          },
+          "frame": {
+            "x": 110,
+            "y": 120,
+            "w": 110,
+            "h": 60
+          }
+        },
+        {
+          "filename": "wolve7.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 110,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          },
+          "frame": {
+            "x": 220,
+            "y": 60,
+            "w": 110,
+            "h": 60
+          }
+        },
+        {
+          "filename": "wolve8.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 110,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          },
+          "frame": {
+            "x": 330,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          }
+        },
+        {
+          "filename": "wolve9.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 110,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 110,
+            "h": 60
+          },
+          "frame": {
+            "x": 0,
+            "y": 240,
+            "w": 110,
+            "h": 60
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7"
+  }
+}

@@ -1,0 +1,52 @@
+{
+    "object": [
+        {
+            "key": "WaterForming",
+            "filename": "A1_AnimatedGround"
+        },
+        {
+            "key": "NatureGround",
+            "filename": "A2_Ground"
+        },
+        {
+            "key": "BuildingWall",
+            "filename": "A4_Walls_2"
+        },
+        {
+            "key": "NatureWall",
+            "filename": "A4_Walls"
+        },
+        {
+            "key": "Floor",
+            "filename": "A5_Tiles"
+        },
+        {
+            "key": "House1",
+            "filename": "B_HouseExteriorTiles_1_B"
+        },
+        {
+            "key": "House2",
+            "filename": "B_HouseExteriorTiles_1"
+        },
+        {
+            "key": "House3",
+            "filename": "B_HouseExteriorTiles_2_B"
+        },
+        {
+            "key": "House4",
+            "filename": "B_HouseExteriorTiles_2"
+        },
+        {
+            "key": "Outdoor",
+            "filename": "C_OutSide_Nature"
+        },
+        {
+            "key": "Indoor",
+            "filename": "D_Inside_House"
+        },
+        {
+            "key": "Random",
+            "filename": "D_OutDoor"
+        }
+    ]
+}

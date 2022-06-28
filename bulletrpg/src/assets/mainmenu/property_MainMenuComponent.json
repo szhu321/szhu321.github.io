@@ -1,0 +1,22 @@
+{
+    "component": [
+        {
+            "picture": "menubackground.jpg"
+        },
+        {
+            "picture": "title.png"
+        },
+        {
+            "picture": "button_play.png"
+        },
+        {
+            "picture": "button_control.png"
+        },
+        {
+            "picture": "button_option.png"
+        },
+        {
+            "picture": "button_credit.png"
+        }
+    ]
+}
