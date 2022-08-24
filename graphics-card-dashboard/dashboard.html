@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Card Dashboard</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="data.js"></script>
+    <script src="pdata.js"></script>
+    <script src="link.js"></script>
+    <script src="barchart.js"></script>
+    <script src="scatterplot.js"></script>
+    <script src="parallelcoor.js"></script>
+    <script src="piechart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Graphics Card Dashboard</h1>
+
+        <div class="row">
+            <button id="reset">
+                Reset
+            </button>
+            <div class="chart">
+                <div class="dropdown">
+                    <label for="dropdown1">Attributes</label>
+                    <select name="dropdown1" id="dropdown1"></select>
+                </div>
+                <h3 class="title">Pie Chart</h5>
+                <div id="pie-chart"></div>
+            </div>
+            
+            <div class="chart">
+                <h3 class="title">Parallel Coordinates</h5>
+                <div id="parallel-coordinates-chart"></div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="chart">
+                <div class="dropdown">
+                    <label for="dropdown2">X-Attributes</label>
+                    <select name="dropdown2" id="dropdown2"></select>
+                    <br>
+                    <label for="dropdown3">Y-Attributes</label>
+                    <select name="dropdown3" id="dropdown3"></select>
+                </div>
+                <h3 class="title">Scatterplot</h5>
+                <div id="scatterplot"></div>
+            </div>
+            
+            <div class="chart">
+                <div class="dropdown">
+                    <label for="dropdown4">Attributes</label>
+                    <select name="dropdown4" id="dropdown4"></select>
+                </div>
+                <h3 class="title">Bar Chart</h5>
+                <div id="bar-chart"></div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
